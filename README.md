@@ -1,9 +1,6 @@
 # Analysis for simplified GUIDE-seq 
 
-
-See the [wiki](https://github.com/aryeelab/umi/wiki) for documentation
-
-### This fork of the *umi* package is intended to be used with [GUIDE-seq simplified library preparation protocol](https://dx.doi.org/10.17504/protocols.io.wikfccw)
+### This fork of the *umi* [package](https://github.com/aryeelab/umi/wiki) is intended to be used with [GUIDE-seq simplified library preparation protocol](https://dx.doi.org/10.17504/protocols.io.wikfccw)
 
 
 The simplified GUIDE-seq protocol produces libraries that 
@@ -18,16 +15,18 @@ The above changes necessitate modifying the [GUIDE-seq](https://github.com/aryee
 
 1. Install the GUIDE-seq package. Instructions [here](https://github.com/aryeelab/guideseq#download-and-set-up-guideseq).
 
-2. Download the UMI package from this repo and replace the umitag.py in the GUIDE-seq package with the umitag.py file from this package.
+2. Download the UMI package from this repo and replace the `umitag.py` in the GUIDE-seq package with the umitag.py file from this package.
 
-3. Start analysis with step [umitag](https://github.com/aryeelab/guideseq#umitag-reads). Since you will be working with demultiplexed fastq files, use the following command.
+3. Replace the `identifyOfftargetSites.py` file in the GUIDE-seq package with the version from this package.
+
+4. Start analysis with step [umitag](https://github.com/aryeelab/guideseq#umitag-reads). Since you will be working with demultiplexed fastq files, use the following command.
 
 ```
 python ../umitag.py --read1_in mysample.r1.fastq --read2_in mysample.r2.fastq --read1_out mysample.r1.umitagged.fastq --read2_out mysample.r2.umitagged.fastq
 ```
 
-4. Use the output files in the next step - [Consolidate](https://github.com/aryeelab/umi/wiki#3-consolidate-reads-with-the-same-molecular-index).
+5. Use the output files in the next step - [Consolidate](https://github.com/aryeelab/umi/wiki#3-consolidate-reads-with-the-same-molecular-index).
 
-5. Follow the rest of the steps as in the GUIDE-seq analysis [workflow](https://github.com/aryeelab/guideseq#align-sites-to-genome).
+6. Follow the rest of the steps as in the GUIDE-seq analysis [workflow](https://github.com/aryeelab/guideseq#align-sites-to-genome).
 
-### An automated pipeline similar to GUIDE-seq is under development. I will make a note here when the new package is available. 
+#### An automated pipeline like that of GUIDE-seq is under development. I will make a note here when the new package is available. 
