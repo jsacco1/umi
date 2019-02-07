@@ -10,7 +10,9 @@
 # 2014.09.17 Add feature to align sequence with off-target site
 # 2015.10.05 Replaced swalign with regex matching
 
-__author__ = 'shengdar'
+__author__ = 'shengdar; primer sequences changed by nppalani'
+
+# original version downloaded from @ https://github.com/aryeelab/guideseq
 
 import argparse
 import collections
@@ -258,7 +260,7 @@ def analyze(sam_filename, reference_genome, outfile, annotations):
 
 def assignPrimerstoReads(read_sequence, sam_flag):
     # Get 20-nucleotide sequence from beginning or end of sequence depending on orientation
-    # modified primer sequences to match new library design - Nagendra Palani
+    # modified primer sequences to match new library design - nppalani
     if int(sam_flag) & 16:
         readstart = reverseComplement(read_sequence[-23:-3])
     else:
