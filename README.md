@@ -4,7 +4,7 @@ Preprocessing tools for unique molecular index (UMI) sequencing reads
 
 See the [wiki](https://github.com/aryeelab/umi/wiki) for documentation
 
-#### This fork of the *umi* package is intended to be used with [GUIDE-seq simplified library preparation protocol](https://dx.doi.org/10.17504/protocols.io.wikfccw)
+### This fork of the *umi* package is intended to be used with [GUIDE-seq simplified library preparation protocol](https://dx.doi.org/10.17504/protocols.io.wikfccw)
 
 
 The simplified GUIDE-seq protocol produces libraries that 
