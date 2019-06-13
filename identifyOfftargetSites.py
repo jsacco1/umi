@@ -305,8 +305,11 @@ def processLine(line):
 
 
 def reverseComplement(sequence):
-    transtab = string.maketrans("ACGT", "TGCA")
+   # transtab = string.maketrans("ACGT", "TGCA") Changed to line below based on https://github.com/aryeelab/guideseq/issues/51
+    transtab = string.maketrans("ACGTacgt", "TGCATGCA")
     return sequence.translate(transtab)[::-1]
+
+
 
 
 def main():
